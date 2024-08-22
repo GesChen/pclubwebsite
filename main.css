@@ -1,0 +1,22 @@
+body {
+    --main_size: 25px;
+    
+    font-family: 'Consolas', monospace;
+    background-color: black;
+    color: lime;
+
+    font-size: var(--main_size);
+
+}
+
+p {
+    margin: 0;
+    line-height: var(--main_size);
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdownitem {
+}
