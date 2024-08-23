@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Club</title>
+    <title>OL Programming Club</title>
     <link rel="stylesheet" href="main.css">
+    <script src="typer.js"></script>
+    <script src="dropdown.js"></script>
 </head>
 <body>
-    <p>Ocean Lakes Programming Club</p>
-    <p> ├─Next meeting: one lunch 9-?-24 </p>
-    <p class="dropdown" id="about"> ├─about us ></p>
-    <div class="dropdownmenu" id="aboutdropdown">
+    <p id="title" class="hidden">Ocean Lakes Programming Club</p>
+    <p id="nextmeeting"class="hidden"> ├─Next meeting: one lunch 9-?-24 </p>
+    <p class="dropdown hidden" id="about"> ├─about us ></p>
+    <div class="dropdownmenu hidden" id="aboutdropdown">
         <p class="dropdownitem">│   └─socials</p>
     </div>
-    <p class="dropdown" id="competitions">├─competitions ></p>
-    <p class="dropdown" id="practice">├─practice resources ></p>
-    <p class="dropdown" id="other">└─other resources ></p>
+    <p class="dropdown hidden" id="competitions">├─competitions ></p>
+    <div class="dropdownmenu hidden" id="competitionsdropdown">
+        <p class="dropdownitem">│   └─socials</p>
+    </div>
+    <p class="dropdown hidden" id="practice">├─practice resources ></p>
+    <div class="dropdownmenu hidden" id="practicedropdown">
+        <p class="dropdownitem">│   └─socials</p>
+    </div>
+    <p class="dropdown hidden" id="other">└─other resources ></p>
+    <div class="dropdownmenu hidden" id="otherdropdown">
+        <p class="dropdownitem">..└─socials</p>
+    </div>
 </body>
 </html>
