@@ -27,11 +27,31 @@ p {
 }
 
 .dropdown {
+    opacity: 100%;
     cursor: pointer;
 }
 
 .dropdown:hover {
     font-weight: 1000;
+    animation: flash .75s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 100%;
+    }
+    49% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 40%;
+    }
+    99% {
+        opacity: 40%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
 .dropdownitem {
