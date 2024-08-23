@@ -68,4 +68,16 @@ window.addEventListener("load", () => {
             }
         }, 400);
     }, 2000);
+
+    setTimeout(() => {
+        const next = document.getElementById("nextmeeting");
+        setInterval(() => {
+            if (next.textContent.charAt(14) == ":") {
+                next.textContent = replaceAt(next.textContent, 14, " ");
+            }
+            else {
+                next.textContent = replaceAt(next.textContent, 14, ":");
+            }
+        }, 500);
+    }, 2000);
 });

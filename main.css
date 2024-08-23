@@ -1,5 +1,5 @@
 body {
-    --main_size: 40px;
+    --main_size: 35px;
     
     font-family: 'Consolas', monospace;
     background-color: black;
@@ -59,4 +59,14 @@ p {
 
 .hidden {
     display: none;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    font-weight: 1000;
 }
