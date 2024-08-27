@@ -44,13 +44,38 @@ function flickerChar(element, charindex, numTimes, accum, original) {
 }
 
 function flicker() {
-    
     const ps = document.getElementsByTagName("p");
     const toflicker = ps[Math.floor(Math.random() * ps.length)];
     const flickerindex = Math.floor(Math.random() * toflicker.textContent.length);
     const numTimes = Math.floor(Math.random() * 7 + 1);
     
     flickerChar(toflicker, flickerindex, numTimes, 0, toflicker.textContent);
+}
+
+function addRandom(element, numTimes, totalTarget, delay)
+{
+    if (numTimes < totalTarget) {
+        element.textContent += rand()
+        setTimeout(function(){ addRandom(element, numTimes + 1, totalTarget, delay) }, delay);
+    }
+}
+
+function death() {
+    const ps = document.getElementsByTagName("p");
+    let contents = [];
+    for (let element of ps)
+    {
+        element.textContent = "";
+        addRandom(element, 0, 5000, 1);
+    }
+
+    setTimeout(()=>{
+        document.body.innerHTML = "";
+        
+        setTimeout(()=>{
+            window.location.reload();
+        }, 1000);
+    }, 3000);
 }
 
 window.addEventListener("load", () => {
@@ -65,6 +90,14 @@ window.addEventListener("load", () => {
         setInterval(() => {
             if (Math.random() > .5) {
                 flicker();
+            }
+        }, 400);
+    }, 2000);
+
+    setTimeout(() => {
+        setInterval(() => {
+            if (Math.random() > .99) {
+                death();
             }
         }, 400);
     }, 2000);
