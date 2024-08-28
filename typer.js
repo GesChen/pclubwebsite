@@ -99,7 +99,7 @@ window.addEventListener("load", () => {
             if (Math.random() > .99) {
                 death();
             }
-        }, 400);
+        }, 1000);
     }, 2000);
 
     setTimeout(() => {
