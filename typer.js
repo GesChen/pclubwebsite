@@ -94,13 +94,13 @@ window.addEventListener("load", () => {
         }, 400);
     }, 2000);
 
-    setTimeout(() => {
+    /*setTimeout(() => {
         setInterval(() => {
             if (Math.random() > .99) {
                 death();
             }
         }, 1000);
-    }, 2000);
+    }, 2000);*/
 
     setTimeout(() => {
         const next = document.getElementById("nextmeeting");
